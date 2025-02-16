@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+nz-form-label {
+  display: flex;
+  align-items: center;
+}
+
+nz-form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.alinha-direita {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col">
+    <nz-card style="width: auto" nzTitle="Progress">
+      <nz-progress [nzPercent]="30"></nz-progress>
+      <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+      <nz-progress [nzPercent]="70" nzStatus="exception"></nz-progress>
+      <nz-progress [nzPercent]="100"></nz-progress>
+      <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+    </nz-card>
+  </div>
+  <div class="col">
+    <nz-card style="width: auto" nzTitle="Progress">
+      <nz-progress
+        nz-tooltip
+        nzTooltipTitle="3 done / 3 in progress / 4 to do"
+        [nzPercent]="60"
+        [nzSuccessPercent]="30"
+      ></nz-progress>
+      <div class="row">
+        <div class="col">
+          <nz-progress
+            nz-tooltip
+            nzTooltipTitle="3 done / 3 in progress / 4 to do"
+            nzType="circle"
+            [nzPercent]="60"
+            [nzSuccessPercent]="30"
+          ></nz-progress>
+        </div>
+        <div class="col">
+          <nz-progress
+            class="col"
+            nz-tooltip
+            nzTooltipTitle="3 done / 3 in progress / 4 to do"
+            nzType="dashboard"
+            [nzPercent]="60"
+            [nzSuccessPercent]="30"
+          ></nz-progress>
+        </div>
+      </div>
+    </nz-card>
+  </div>
+</div>

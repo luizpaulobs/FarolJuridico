@@ -1,0 +1,9 @@
+<nz-card
+  class="cardStyles"
+  style="width: 300px; cursor: pointer"
+  [nzTitle]="dados.name"
+  (click)="chamarModulo(dados.name)"
+>
+  <p>Quantidade: {{ dados.quantidade }}</p>
+  <div>Porcentagem: {{ dados.porcentagem }}</div>
+</nz-card>

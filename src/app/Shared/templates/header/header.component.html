@@ -1,0 +1,29 @@
+<nz-layout class="header-container">
+  <nz-header class="header">
+    <div class="logo">Meu App</div>
+    <ul class="nav-links" *ngIf="!isCollapsed">
+      <li><a nz-button nzType="link" routerLink="/">Início</a></li>
+      <li><a nz-button nzType="link" routerLink="/sobre">Sobre</a></li>
+      <li><a nz-button nzType="link" routerLink="/contato">Contato</a></li>
+    </ul>
+    <div class="menu-right">
+      <button
+        nz-button
+        nzType="text"
+        class="menu-toggle"
+        (click)="toggleMenu()"
+      >
+        <i nz-icon nzType="menu" nzTheme="outline"></i>
+      </button>
+      <!-- <nz-dropdown [nzTrigger]="'click'">
+        <button nz-button nzType="text" nz-dropdown>
+          <i nz-icon nzType="user" nzTheme="outline"></i>
+        </button>
+        <ul nz-menu>
+          <li nz-menu-item>Perfil</li>
+          <li nz-menu-item>Sair</li>
+        </ul>
+      </nz-dropdown> -->
+    </div>
+  </nz-header>
+</nz-layout>

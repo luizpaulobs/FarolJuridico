@@ -1,0 +1,11 @@
+<div class="workflowPad">
+  <h4>Workflows</h4>
+  <p>Fluxo de Workflows</p>
+  <nz-carousel [nzEffect]="effect">
+    <div nz-carousel-content class="d-flex justify-content-around">
+      <div nz-carousel-content *ngFor="let item of array">
+        <app-card-carousel [dados]="item"></app-card-carousel>
+      </div>
+    </div>
+  </nz-carousel>
+</div>

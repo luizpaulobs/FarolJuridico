@@ -1,0 +1,156 @@
+<div class="col">
+  <nz-icon nzType="scissor" nzTheme="outline" />
+  <form
+    nz-form
+    class="pesquisa-form"
+    (ngSubmit)="submitForm()"
+    [formGroup]="validateForm"
+  >
+    <div class="row">
+      <div class="col">
+        <nz-form-item class="col" nzLayout="vertical">
+          <nz-form-label nzFor="nome">Nome</nz-form-label>
+          <nz-form-control nzErrorTip="Informe o nome!">
+            <input nz-input formControlName="nome" type="text" id="nome" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="sobrenome">Sobrenome</nz-form-label>
+          <nz-form-control nzErrorTip="Informe o sobrenome!">
+            <input
+              nz-input
+              formControlName="sobrenome"
+              type="text"
+              id="sobrenome"
+            />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="email">E-mail</nz-form-label>
+          <nz-form-control nzErrorTip="Informe o email!">
+            <input nz-input formControlName="email" type="email" id="email" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="motivo">Motivo</nz-form-label>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Select a person"
+            id="motivo"
+            formControlName="motivo"
+          >
+            <nz-option nzLabel="Jack" nzValue="1"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="2"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="3"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="submotivo">Submotivo</nz-form-label>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Select a person"
+            id="submotivo"
+            formControlName="submotivo"
+          >
+            <nz-option nzLabel="Jack" nzValue="1"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="2"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="3"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label>Data Distribuição</nz-form-label>
+          <nz-date-picker
+            formControlName="dataDistribuicao"
+            id="dataDistribuicao"
+            (ngModelChange)="onChange($event)"
+          ></nz-date-picker>
+        </nz-form-item>
+      </div>
+
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label>Data Prazo</nz-form-label>
+          <nz-range-picker
+            formControlName="dataPrazo"
+            id="dataPrazo"
+            (ngModelChange)="onChange($event)"
+          ></nz-range-picker>
+        </nz-form-item>
+      </div>
+
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="submotivo">Tipo Teste</nz-form-label>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Select a person"
+            id="tipoTeste"
+            formControlName="tipoTeste"
+          >
+            <nz-option nzLabel="Jack" nzValue="1"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="2"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="3"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="submotivo">Tipo Reversao</nz-form-label>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Select a person"
+            id="tipoReversao"
+            formControlName="tipoReversao"
+          >
+            <nz-option nzLabel="Jack" nzValue="1"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="2"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="3"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+
+      <div class="col">
+        <nz-form-item>
+          <nz-form-label nzFor="submotivo">Tipo Pagamento</nz-form-label>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Select a person"
+            id="tipoPagamento"
+            formControlName="tipoPagamento"
+          >
+            <nz-option nzLabel="Jack" nzValue="1"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="2"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="3"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+    </div>
+    <div class="alinha-direita">
+      <button
+        nz-button
+        [nzType]="'primary'"
+        class="pesquisa-form-button pesquisa-form-margin"
+      >
+        Pesquisar
+      </button>
+    </div>
+  </form>
+</div>
