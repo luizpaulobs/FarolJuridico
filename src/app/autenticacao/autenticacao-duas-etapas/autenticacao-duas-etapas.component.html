@@ -1,0 +1,26 @@
+<div>
+  <h2>Autenticacao Microsoft!</h2>
+  <p>Digite o codigo.</p>
+  <form
+    nz-form
+    nzLayout="vertical"
+    [formGroup]="validateForm"
+    (ngSubmit)="submitForm()"
+  >
+    <nz-form-item>
+      <nz-form-label nzRequired nzFor="email">Codigo</nz-form-label>
+      <nz-form-control nzErrorTip="Favor inserir o codigo!">
+        <nz-input-group nzPrefixIcon="user">
+          <input formControlName="codigo" nz-input placeholder="codigo" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="!validateForm.valid">
+          Logar
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

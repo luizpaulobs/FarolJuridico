@@ -1,15 +1,19 @@
 import { Routes } from '@angular/router';
 
 export const App_Routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/teste' },
   {
-    path: 'welcome',
+    path: 'autenticacao',
     loadChildren: () =>
-      import('./pages/welcome/welcome.routes').then((m) => m.WELCOME_ROUTES),
+      import('./Shared/routes/login-layout.routes').then(
+        (r) => r.LoginLayout_Routes
+      ),
   },
   {
-    path: 'teste',
-    loadComponent: () =>
-      import('./teste/teste.component').then((c) => c.TesteComponent),
+    path: 'common',
+    loadChildren: () =>
+      import('./Shared/routes/common-layout.routes').then(
+        (r) => r.CommonLayout_Routes
+      ),
   },
+  { path: '**', pathMatch: 'full', redirectTo: 'autenticacao/login' },
 ];

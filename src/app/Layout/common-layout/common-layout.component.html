@@ -1,2 +1,56 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<nz-layout>
+  <nz-sider
+    nzWidth="200px"
+    nzTheme="light"
+    [nzTrigger]="null"
+    nzCollapsible
+    [(nzCollapsed)]="isCollapsed"
+  >
+    <div *ngIf="!isCollapsed">
+      <img nz-image width="200px" nzSrc="assets/logos/logo.png" alt="" />
+    </div>
+    <ul nz-menu nzMode="inline" class="sider-menu">
+      <li nz-submenu nzOpen nzIcon="user" nzTitle="Juridico">
+        <ul>
+          <li nz-menu-item nzSelected [routerLink]="['/common/workflows']">
+            Workflows
+          </li>
+          <li nz-menu-item>option2</li>
+          <li nz-menu-item>option3</li>
+          <li nz-menu-item>option4</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Pre-Juridico" nzIcon="laptop">
+        <ul>
+          <li nz-menu-item>option5</li>
+          <li nz-menu-item>option6</li>
+          <li nz-menu-item>option7</li>
+          <li nz-menu-item>option8</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Admin" nzIcon="notification">
+        <ul>
+          <li nz-menu-item>Usuarios</li>
+          <li nz-menu-item>option10</li>
+          <li nz-menu-item>option11</li>
+          <li nz-menu-item>option12</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout class="inner-layout">
+    <nz-header>
+      <span
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed"
+      ></span>
+    </nz-header>
+
+    <nz-content>
+      <router-outlet> </router-outlet>
+    </nz-content>
+    <nz-footer> Leaf Consultoria Lmtd &copy; Direitos reservados</nz-footer>
+  </nz-layout>
+</nz-layout>

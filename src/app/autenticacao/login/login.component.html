@@ -1,0 +1,39 @@
+<div>
+  <h2>Bem Vindo!</h2>
+  <p>Faça o login.</p>
+  <form
+    nz-form
+    nzLayout="vertical"
+    [formGroup]="validateForm"
+    (ngSubmit)="submitForm()"
+  >
+    <nz-form-item>
+      <nz-form-label nzRequired nzFor="email">E-mail</nz-form-label>
+      <nz-form-control nzErrorTip="Favor inserir o email!">
+        <nz-input-group nzPrefixIcon="user">
+          <input formControlName="email" nz-input placeholder="email" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label nzRequired nzFor="password">Senha</nz-form-label>
+      <nz-form-control nzErrorTip="Favor inserir a Senha!">
+        <nz-input-group nzPrefixIcon="lock">
+          <input
+            formControlName="password"
+            nz-input
+            type="password"
+            placeholder="senha"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="mt-2">
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="!validateForm.valid">
+          Logar
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
