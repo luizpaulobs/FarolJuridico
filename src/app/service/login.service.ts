@@ -24,4 +24,8 @@ export class LoginService {
     }
     return false;
   }
+
+  logout() {
+    this.router.navigate(['/autenticacao/login']);
+  }
 }

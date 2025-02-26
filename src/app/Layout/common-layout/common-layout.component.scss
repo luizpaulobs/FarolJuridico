@@ -17,6 +17,7 @@ nz-footer {
   line-height: 0.5;
   text-align: center;
   position: relative;
+  background-color: white;
 }
 
 nz-sider {
@@ -29,7 +30,7 @@ nz-content {
   background: rgb(215, 224, 252);
   color: #ece4ff;
   min-height: 90vh;
-  line-height: 120px;
+  //line-height: 120px;
   //padding: 2rem;
   flex: 1;
 }

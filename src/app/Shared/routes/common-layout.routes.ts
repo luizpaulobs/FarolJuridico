@@ -25,6 +25,13 @@ export const CommonLayout_Routes: Routes = [
             (e) => e.WorkflowsComponent
           ),
       },
+      {
+        path: 'usuarios',
+        loadComponent: () =>
+          import('../../usuarios/usuarios.component').then(
+            (c) => c.UsuariosComponent
+          ),
+      },
     ],
   },
 ];

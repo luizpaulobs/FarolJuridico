@@ -8,13 +8,14 @@ import {
   Renderer2,
 } from '@angular/core';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { ControlTabsWorkflowsService } from '../service/controlTabsWorkflows.service';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
-import { DashboardComponent } from '../workflows/dashboard/dashboard.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
-import { CondenacaoComponent } from '../workflows/Condenacao/condenacao.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { CondenacaoComponent } from '../Condenacao/condenacao.component';
+import { ControlTabsWorkflowsService } from '../../service/controlTabsWorkflows.service';
 
 @Component({
+  standalone: true,
   selector: 'app-tab-workflows',
   imports: [
     NzTabsModule,

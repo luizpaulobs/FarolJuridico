@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { ControlTabsWorkflowsService } from '../service/controlTabsWorkflows.service';
+import { CardModel } from '../../models/card-model';
+import { ControlTabsWorkflowsService } from '../../service/controlTabsWorkflows.service';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
-import { CardModel } from '../models/card-model';
 
 @Component({
+  standalone: true,
   selector: 'app-carousel',
   imports: [NzCarouselModule, NgFor, CardCarouselComponent],
   template: `<p>carousel works!</p>`,

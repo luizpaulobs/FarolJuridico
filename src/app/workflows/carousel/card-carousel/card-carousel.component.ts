@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NzCardModule } from 'ng-zorro-antd/card';
-import { CardModel } from '../../models/card-model';
-import { ControlTabsWorkflowsService } from '../../service/controlTabsWorkflows.service';
+import { CardModel } from '../../../models/card-model';
+import { ControlTabsWorkflowsService } from '../../../service/controlTabsWorkflows.service';
 
 @Component({
+  standalone: true,
   selector: 'app-card-carousel',
   imports: [NzCardModule],
   templateUrl: './card-carousel.component.html',

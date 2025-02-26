@@ -30,22 +30,28 @@
       </li>
       <li nz-submenu nzTitle="Admin" nzIcon="notification">
         <ul>
-          <li nz-menu-item>Usuarios</li>
-          <li nz-menu-item>option10</li>
-          <li nz-menu-item>option11</li>
-          <li nz-menu-item>option12</li>
+          <li nz-menu-item [routerLink]="['/common/usuarios']">Usuarios</li>
         </ul>
       </li>
     </ul>
   </nz-sider>
   <nz-layout class="inner-layout">
-    <nz-header>
+    <nz-header class="justify-content-between d-flex align-items-center">
       <span
         class="trigger"
         nz-icon
         [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
         (click)="isCollapsed = !isCollapsed"
       ></span>
+      <button
+        nz-button
+        nzType="primary"
+        nzDanger
+        [routerLink]="'/autenticacao/logout'"
+        class="ms-4"
+      >
+        Logout
+      </button>
     </nz-header>
 
     <nz-content>
