@@ -1,0 +1,7 @@
+.striped-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Branco */
+}
+
+.striped-table tbody tr:nth-child(even) {
+  background-color: #e6f7ff; /* Azul claro */
+}

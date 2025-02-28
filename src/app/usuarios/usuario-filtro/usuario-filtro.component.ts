@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
@@ -20,6 +21,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
     NzInputModule,
     NzSelectModule,
     FormsModule,
+    NzDividerModule,
   ],
   templateUrl: './usuario-filtro.component.html',
   styleUrl: './usuario-filtro.component.scss',
